@@ -17,8 +17,6 @@ stdout_handler = logging.StreamHandler(sys.stdout)
 logger.addHandler(output_file_handler)
 logger.addHandler(stdout_handler)
 
-from datetime import datetime
-
 # local
 import config
 
