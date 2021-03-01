@@ -2,6 +2,7 @@ import sys
 import logging
 import dataset
 from datetime import datetime
+from datetime import timedelta
 
 from createsend import Client
 from createsend import CreateSend
@@ -29,7 +30,7 @@ auth = {'api_key': config.API_KEY}
 cs = CreateSend(auth)
 
 sync_date = datetime.today()
-sync_date = sync_date.replace(day=sync_date.day-14).strftime('%Y-%m-%d')
+sync_date = (sync_date - timedelta(days=14)).strftime('%Y-%m-%d')
 
 
 def get_db_info():
