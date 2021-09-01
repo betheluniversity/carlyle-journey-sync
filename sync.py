@@ -1,4 +1,5 @@
 import sys
+import os
 import logging
 import dataset
 from datetime import datetime
@@ -8,6 +9,8 @@ from createsend import Client
 from createsend import CreateSend
 from createsend import Journey
 from createsend import JourneyEmail
+
+os.environ['ORACLE_HOME'] = '/usr/lib/oracle/12.1/client64'
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
