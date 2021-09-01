@@ -10,7 +10,12 @@ from createsend import CreateSend
 from createsend import Journey
 from createsend import JourneyEmail
 
-os.environ['ORACLE_HOME'] = '/usr/lib/oracle/12.1/client64'
+oracle_path = '/usr/lib/oracle/12.1/client64'
+
+os.environ['ORACLE_HOME'] = oracle_path
+os.environ['LD_LIBRARY_PATH'] = oracle_path
+os.environ['DYLD_LIBRARY_PATH'] = oracle_path
+
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
